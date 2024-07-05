@@ -107,13 +107,12 @@ def signup(username, password):
     return True
 
 init_db()
-update_db_schema()  # Ensure the database schema is up to date
+update_db_schema()  
 known_face_names, known_face_mobiles, known_face_encodings = load_known_faces()
 
-# Streamlit application
 st.title("Face Recognition")
 
-# Login
+
 if 'logged_in' not in st.session_state:
     st.session_state['logged_in'] = False
 
@@ -127,7 +126,7 @@ if not st.session_state['logged_in']:
             if login(username, password):
                 st.session_state['logged_in'] = True
                 st.success("Logged in successfully")
-                st.experimental_rerun()  # Rerun the app to go to the main page
+                st.experimental_rerun()  
             else:
                 st.error("Invalid username or password")
     
