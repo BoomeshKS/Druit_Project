@@ -1,4 +1,6 @@
-streamlit
-opencv-python
+cmake
+dlib
 face_recognition
+opencv-python
 numpy
+streamlit
